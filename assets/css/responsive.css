@@ -1,0 +1,385 @@
+@media screen and (max-width:992px) {
+
+    /* ------------------ */
+    /*    Header          */
+    /* ------------------ */
+
+    /* Header Top Header  */
+    .ms-header .ms-header-top .ms-header-top--menu ul:nth-child(1) li {
+        display: none;
+    }
+
+    .ms-header-top--menu .hamburger {
+        display: block !important;
+    }
+
+    /* Header Hero */
+    /* Header Hero Section Left  */
+    /* Header Hero Section Right  */
+
+    /* ------------------ */
+    /* Main               */
+    /* ------------------ */
+
+    /* Section 01 -- Coronavirus */
+    /* Section 02 -- Contagion */
+    /* Section 03 -- Symptomps */
+    /* Section 04 -- what  should we do */
+    /* Section 05 -- Live Reports */
+
+
+
+    /* ------------------ */
+    /* Footer             */
+    /* ------------------ */
+
+    .ms-footer--main {
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Opt In Form */
+
+    /* Main */
+
+    .ms-footer--main .menu ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 20px;
+    }
+
+    .ms-footer--main .menu ul li {
+        padding: 0;
+    }
+
+    .ms-footer--main .menu ul li::before {
+        content: "";
+        display: none;
+    }
+
+    /* Copyright Info */
+
+
+}
+
+@media screen and (max-width:768px) {
+
+
+    /* ------------------ */
+    /*    Header     */
+    /* ------------------ */
+
+    /* Header Top Header  */
+    /* Header Hero */
+    /* Header Hero Section Left  */
+    /* Header Hero Section Right  */
+
+    /* ------------------ */
+    /* Main               */
+    /* ------------------ */
+
+    /* Section 01 -- Coronavirus */
+    /* Section 02 -- Contagion */
+    /* Section 03 -- Symptomps */
+    /* Section 04 -- what  should we do */
+
+    /* Section 05 -- Live Reports */
+
+    .ms-main-section-5--liveReports {
+        display: flex;
+        font-family: var(--ms-secondary-font);
+        color: var(--ms-secondary-color);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .ms-main-section-5--liveReports--map .search {
+        margin-right: 0;
+    }
+
+
+    /* ------------------ */
+    /* Footer             */
+    /* ------------------ */
+
+    /* Opt In Form */
+    /* Main */
+    /* Copyright Info */
+
+
+}
+
+@media screen and (max-width:576px) {
+
+    /* ------------------ */
+    /*    Header     */
+    /* ------------------ */
+
+    /* Header Top Header  */
+    /* Header Hero */
+    /* Header Hero Section Left  */
+    /* Header Hero Section Right  */
+
+    /* ------------------ */
+    /* Main               */
+    /* ------------------ */
+
+    /* Section 01 -- Coronavirus */
+    /* Section 02 -- Contagion */
+    /* Section 03 -- Symptomps */
+    /* Section 04 -- what  should we do */
+
+    /* Section 05 -- Live Reports */
+
+    .ms-main-section-5--liveReports {
+        display: flex;
+        font-family: var(--ms-secondary-font);
+        color: var(--ms-secondary-color);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .ms-main-section-5--liveReports--map .controlBar,
+    .ms-main-section-5--liveReports--map .search {
+        transform: scale(0.8);
+    }
+
+    .ms-main-section-5--liveReports--map .search {
+        margin-right: 0;
+    }
+
+    .ms-main-section-5--liveReports--info {
+        width: 100%;
+        background: linear-gradient(360deg, #FFFBFB -79.45%, #FDFDFD 105.35%);
+        box-shadow: 0px 7px 95px rgba(0, 0, 0, 0.13);
+        padding: 40px;
+        transform: scale(0.9);
+    }
+
+
+    /* ------------------ */
+    /* Footer             */
+    /* ------------------ */
+
+    /* Opt In Form */
+
+    .ms-footer--optIn {
+        margin: 50px auto;
+    }
+
+    .ms-footer--optIn h1 {
+        font-size: 35px;
+        font-weight: 600;
+        color: #0C6C44;
+        max-width: 500px;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .ms-footer--optIn form {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: auto;
+        width: 100%;
+    }
+
+    .ms-footer--optIn form input[type="email"] {
+        font-weight: normal;
+        background: white;
+        box-shadow: 0px 8px 80px rgba(0, 0, 0, 0.11);
+        border-radius: 57px;
+        min-width: 100%;
+        padding: 25px 20px;
+        margin: auto;
+        display: block;
+        border: none;
+        font-size: 16px;
+        padding-left: 30px;
+        position: relative;
+    }
+
+    /* Main */
+    /* Copyright Info */
+
+
+}
+
+@media screen and (max-width:480px) {
+
+    /* ------------------ */
+    /*    Component       */
+    /* ------------------ */
+
+    /* Preloader */
+
+    /* Back To Top */
+
+    #progress {
+        display: none;
+        border-radius: 50%;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        position: sticky;
+        top: calc(100vh - 83px);
+        left: calc(100vw - 75px);
+        z-index: 9990;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+    }
+
+    /* Header Top Header  */
+
+    .ms-menu button {
+        display: none;
+    }
+
+
+    /* ------------------ */
+    /*    Header     */
+    /* ------------------ */
+
+    /* Header Top Header  */
+    /* Header Hero */
+    /* Header Hero Section Left  */
+    .ms-heading--big {
+        font-size: 2em;
+    }
+
+    .ms-header .ms-header-hero .ms-header-hero--left {
+        padding: 2cm 0;
+    }
+
+    /* Header Hero Section Right  */
+
+    /* ------------------ */
+    /* Main               */
+    /* ------------------ */
+
+    /* Section 01 -- Coronavirus */
+
+    .ms-main .ms-main-section-1 {
+        margin: 0;
+    }
+
+    .ms-main .ms-main-section-1--left {
+        position: relative;
+        background: url("../images/Illustration/Illustration_(Section_02).png") no-repeat;
+        background-size: contain;
+        background-position: center;
+        min-height: 255px;
+    }
+
+    .ms-main .ms-main-section-1--left img:nth-child(1) {
+        width: 200px;
+        left: 2%;
+        top: 5%;
+    }
+
+    .ms-main .ms-main-section-1--left img:nth-child(2) {
+        width: 200px;
+        left: 40%;
+        top: -32%;
+    }
+
+    .ms-main .ms-main-section-1--left img:nth-child(3) {
+        width: 200px;
+        left: 39%;
+        top: 40%;
+    }
+
+    /* Section 02 -- Contagion */
+
+    /* Section 03 -- Symptomps */
+
+    .ms-main .ms-main-section-3::before {
+        display: none;
+    }
+
+    /* Section 04 -- what  should we do */
+
+    .ms-main .ms-main-section-4 .ms-main-section-4--body .instruction .instruction--img img {
+        width: 100%;
+    }
+
+    .ms-main .ms-main-section-4 .ms-main-section-4--body .instruction .instruction--text {
+        padding-left: 0;
+        position: relative;
+    }
+
+    .ms-main .ms-main-section-4 .ms-main-section-4--body .instruction .instruction--text h2 {
+        margin-bottom: 15px;
+        font-size: 28px;
+        margin-top: 70px;
+    }
+
+    .ms-main .ms-main-section-4 .ms-main-section-4--body .instruction .instruction--text h2::before {
+        content: "";
+        position: absolute;
+        font-size: 30px;
+        left: 0;
+        font-weight: bold;
+        font-family: var(--ms-secondary-font);
+        color: var(--ms-primary-color);
+        background: #FEE6E5;
+        padding: 15px;
+        border-radius: 50px;
+        top: -15px;
+    }
+
+
+    /* Section 05 -- Live Reports */
+
+    .ms-main-section-5--liveReports {
+        display: flex;
+        font-family: var(--ms-secondary-font);
+        color: var(--ms-secondary-color);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .ms-main-section-5--liveReports--map .controlBar,
+    .ms-main-section-5--liveReports--map .search {
+        transform: scale(0.8);
+    }
+
+    .ms-main-section-5--liveReports--map .search {
+        margin-right: 0;
+    }
+
+    .ms-main-section-5--liveReports--info {
+        width: 100%;
+        background: linear-gradient(360deg, #FFFBFB -79.45%, #FDFDFD 105.35%);
+        box-shadow: 0px 7px 95px rgba(0, 0, 0, 0.13);
+        padding: 40px;
+        transform: scale(0.9);
+    }
+
+    /* ------------------ */
+    /* Footer             */
+    /* ------------------ */
+
+    /* Opt In Form */
+
+    .ms-footer--optIn form {
+        transform: scale(0.95);
+        -webkit-transform: scale(0.95);
+        -moz-transform: scale(0.95);
+        -ms-transform: scale(0.95);
+        -o-transform: scale(0.95);
+    }
+
+    /* Main */
+    /* Copyright Info */
+
+}

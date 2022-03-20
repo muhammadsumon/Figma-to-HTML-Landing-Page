@@ -1,0 +1,233 @@
+/* Basic Setting */
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;600;700;900&display=swap');
+
+:root {
+    --ms-primary-color: #FB4C47;
+    --ms-secondary-color: #035755;
+    --ms-primary-font: 'Gelion';
+    --ms-secondary-font: "Red Hat Display";
+
+}
+
+html,
+body {
+    contain: paint;
+}
+
+body {
+    font-family: var(--ms-primary-font);
+    font-weight: thin;
+    scroll-behavior: smooth;
+    font-style: normal;
+}
+
+
+section img {
+    width: 400px;
+}
+
+
+header .ms-header-container,
+main,
+footer,
+.ms-header-hero,
+.ms-main-section-1 {
+    padding-left: 0.7em !important;
+    padding-right: 0.7em !important;
+}
+
+section {
+    padding-top: 2em !important;
+    padding-bottom: 2em !important;
+}
+
+
+header {
+    max-width: 100% !important;
+    margin: auto !important;
+}
+
+header .ms-header-hero,
+header .ms-header-top,
+main,
+footer {
+    max-width: 1200px !important;
+    margin: auto !important;
+}
+
+header .ms-header-top>a,
+header .ms-header-top>nav {
+    max-width: 1200px !important;
+}
+
+
+/* Global or Repeated CSS */
+
+.ms-btn {
+    border-radius: 65px;
+    font-size: 16px;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    border: 2px solid #fb4d4700;
+    margin: 0;
+}
+
+.ms-btn--hover:hover {
+    background: #FB4C47 !important;
+    color: white;
+}
+
+.ms-btn--hover-transparent:hover {
+    border: 2px solid #FB4C47 !important;
+    color: #FB4C47;
+    background: white;
+}
+
+.ms-btn--primary {
+    background: #FB4C47;
+    box-shadow: 0px 8px 87px rgba(0, 0, 0, 0.1);
+    border-radius: 65px;
+    padding: 10px 30px;
+    color: white;
+    margin: 20px 0px;
+
+}
+
+.ms-btn--primary--big {
+    background: #FB4C47;
+    box-shadow: 0px 8px 87px rgba(0, 0, 0, 0.1);
+    border-radius: 65px;
+    padding: 10px 20px;
+    margin: 10px;
+    color: white;
+    margin: 35px auto auto auto;
+    padding: 15px 35px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.ms-btn--outline {
+    border: 2px solid #FB4C47;
+    box-shadow: 0px 8px 87px rgba(0, 0, 0, 0.1);
+    border-radius: 65px;
+    padding: 10px 30px;
+    margin: 10px;
+    color: #FB4C47;
+    -webkit-border-radius: 65px;
+    -moz-border-radius: 65px;
+    -ms-border-radius: 65px;
+    -o-border-radius: 65px;
+}
+
+.ms-btn--bg {
+    background: rgba(250, 86, 82, 0.15);
+    box-shadow: 0px 8px 87px rgba(0, 0, 0, 0.1);
+    border-radius: 65px;
+    padding: 15px 30px;
+    color: var(--ms-primary-color);
+    margin: 20px 0px;
+}
+
+.ms-heading {
+    font-style: normal;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-family: var(--ms-secondary-font);
+    margin-bottom: 30px;
+    line-height: 125%;
+    color: var(--ms-secondary-color);
+}
+
+.ms-sub-heading--section {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.25em !important;
+    color: var(--ms-primary-color);
+    margin-bottom: 10px;
+    text-align: center;
+    margin: 0 !important;
+}
+
+.ms-heading--section {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2em !important;
+    color: var(--ms-secondary-color);
+    margin-bottom: 10px;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.ms-heading--big {
+    margin: 10px auto 20px 0px;
+    line-height: 135%;
+    color: #035755 !important;
+}
+
+.ms-paragraph {
+    font-family: var(--ms-primary-font);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.125em;
+    text-transform: capitalize;
+    color: #4B4F51;
+    line-height: 30px;
+}
+
+.ms-paragraph--section {
+    font-family: var(--ms-primary-font);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1em;
+    text-transform: capitalize;
+    color: #4B4F51;
+    line-height: 30px;
+    text-align: center;
+}
+
+.transition {
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.ms-icon {
+    width: 10px;
+}
+
+@font-face {
+    font-family: "Gelion";
+    src: url("../fonts/Gelion\ Thin.ttf") format("truetype");
+    font-weight: thin;
+}
+
+@font-face {
+    font-family: "Gelion";
+    src: url("../fonts/Gelion\ Regular.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Gelion";
+    src: url("../fonts/Gelion\ Bold.ttf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Gelion";
+    src: url("../fonts/Gelion\ SemiBold.ttf") format("truetype");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Gelion";
+    src: url("../fonts/Gelion\ Black.ttf format")("truetype");
+    font-weight: 800;
+}

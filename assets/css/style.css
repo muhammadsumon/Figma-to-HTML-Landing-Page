@@ -1,0 +1,936 @@
+/*
+
+.. Template Name        : Covid 19 Landing Page
+.. Description          : This covid 19 related html landing Page converted from a figma design by Muhammad Sumon
+.. Author & Developer   : Muhammad Sumon
+.. Dev Email            : muhammadsumon.me@gmail.com
+.. Dev Facebook Id      : https://facebook.com/muhammadsumon.me
+
+
+------------------------
+T A B L E   O F   C S S
+------------------------
+
+01 . Component
+      1.1 Scroll To Top
+
+02 . Header
+   || 2.1 Top Header
+          2.1.1 Logo
+          2.1.2 Main Menu
+          2.1.2 Mobile Menu
+   || 2.2 Hero
+
+03 . Main
+   || 3.1 Section 01 -- Coronavirus
+   || 3.2 Section 02 -- Contagion
+   || 3.3 Section 03 -- Symptomps
+   || 3.4 Section 04 -- what should we do
+   || 3.5 Section 05 -- Live Reports
+
+04 . Footer
+   || 4.1 Opt In Form
+   || 4.2 Main
+   || 4.3 Copyright Info
+
+*/
+
+
+/* ------------------ */
+/*   01 . Component   */
+/* ------------------ */
+
+/* 1.1 Scroll To Top  */
+
+#progress {
+    display: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    position: sticky;
+    top: calc(100vh - 100px);
+    left: calc(100vw - 110px);
+    z-index: 9990;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+#progress-value {
+
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 35px;
+    width: 45px;
+    height: 45px;
+    color: var(--ms-secondary-color);
+}
+
+#progress-value i {
+    height: 32px;
+    font-size: 28px;
+}
+
+
+/* ------------------ */
+/*    02 . Header     */
+/* ------------------ */
+
+.ms-header {
+    display: initial;
+}
+
+.ms-header .ms-header-container {
+    background: #ffffff;
+}
+
+
+/* 02 . Header -- || 2.1 Top Header -- Logo */
+
+.ms-header .ms-header-top .ms-header-top--logo {
+    width: 150px;
+}
+
+.ms-header .ms-header-top .ms-header-top--logo img {
+    max-width: 150px;
+}
+
+
+/* 02 . Header -- 2.1 Top Header -- Main Menu */
+
+.ms-header .ms-header-top .ms-header-top--menu ul.ms-menu {
+    width: 100%;
+}
+
+.ms-header .ms-header-top .ms-header-top--menu ul li,
+.ms-footer--main .menu ul li {
+    text-transform: capitalize;
+    font-family: var(--ms-primary-font);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 22px;
+    padding: 10px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.ms-header .ms-header-top .ms-header-top--menu ul.ms-menu li::before,
+.ms-footer--main .menu ul li::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    background: var(--ms-primary-color);
+    position: absolute;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    color: var(--ms-primary-color);
+    bottom: -20%;
+    left: calc(100% - 50%);
+    transition: 0.4s ease-in-out;
+    -webkit-transition: 0.4s ease-in-out;
+    -moz-transition: 0.4s ease-in-out;
+    -ms-transition: 0.4s ease-in-out;
+    -o-transition: 0.4s ease-in-out;
+}
+
+.ms-header .ms-header-top .ms-header-top--menu ul.ms-menu li:hover,
+.ms-footer--main .menu ul li:hover a {
+    color: var(--ms-primary-color) !important;
+    transition: color 0.5s;
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -ms-transition: color 0.5s;
+    -o-transition: color 0.5s;
+}
+
+.ms-header .ms-header-top .ms-header-top--menu ul.ms-menu li:hover::before,
+.ms-footer--main .menu ul li:hover:before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: var(--ms-primary-color);
+    position: absolute;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    color: var(--ms-primary-color);
+    bottom: 0;
+    left: calc(100% - 50%);
+
+}
+
+.ms-header .ms-header-top .ms-header-top--menu ul li a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+
+
+/* 02 . Header -- 2.1 Top Header -- Main Menu -- Humberger Icon */
+
+.hamburger-inner,
+.hamburger-inner::after,
+.hamburger-inner::before {
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    transition-timing-function: ease;
+    transition-duration: .15s;
+    transition-property: transform;
+    border-radius: 4px;
+    background-color: var(--ms-secondary-color) !important;
+}
+
+.hamburger--collapse .hamburger-inner::before {
+    transition: top .12s cubic-bezier(.33333, .66667, .66667, 1) .2s, transform .13s cubic-bezier(.55, .055, .675, .19);
+    width: 22px !important;
+}
+
+.hamburger.is-active:hover .hamburger--collapse .hamburger-inner::before,
+.hamburger:hover .hamburger--collapse .hamburger-inner::before {
+    transition: top .12s cubic-bezier(.33333, .66667, .66667, 1) .2s, transform .13s cubic-bezier(.55, .055, .675, .19);
+    width: 40px !important;
+}
+
+.hamburger {
+    display: none !important;
+}
+
+/* 02 . Header -- 2.1 Top Header -- Mobile Menu */
+
+.ms-mobile-menu {
+    background: #fff;
+    width: 100%;
+    color: var(--ms-secondary-color);
+    position: absolute;
+    left: 0;
+    visibility: hidden;
+    transform: translateY(-5px);
+    transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+}
+
+.ms-mobile-menu.show {
+    visibility: visible;
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+}
+
+.ms-mobile-menu li {
+    border-bottom: 1px solid #0203020a;
+    transition: transform 0.3s ease;
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    margin: 10px 0px;
+    text-align: center;
+}
+
+.ms-mobile-menu button {
+    margin: 20px auto;
+    display: block;
+}
+
+.ms-mobile-menu li:hover {
+    transform: translateX(10px);
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+}
+
+
+
+/* 02 . Header -- || 6.2 Hero */
+
+.ms-header .ms-header-hero .ms-header-hero--left {
+    padding: 4cm 0;
+}
+
+.ms-header .ms-header-hero .ms-header-hero--left h4,
+.ms-heading--small {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.375em !important;
+    margin: 0 !important;
+    color: var(--ms-primary-color) !important;
+}
+
+.ms-header .ms-header-hero .ms-header-hero--left h2 {
+    margin: 10px 0 15px 0 !important;
+    font-style: normal;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-family: var(--ms-secondary-font);
+
+}
+
+.ms-header .ms-header-hero .ms-header-hero--left h2,
+.ms-heading--big {
+    margin: 10px auto 20px 0px;
+    line-height: 135%;
+    color: #035755 !important;
+}
+
+.ms-header .ms-header-hero .ms-header-hero--left p,
+.ms-paragraph {
+    font-family: var(--ms-primary-font);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.125em;
+    text-transform: capitalize;
+    color: #4B4F51;
+    line-height: 30px;
+}
+
+.ms-header .ms-header-hero .ms-header-hero--right {
+    width: 1440px;
+    position: absolute;
+}
+
+.ms-header .ms-header-hero .ms-header-hero--right img {
+    max-width: 833px;
+    position: absolute;
+    right: 159px;
+}
+
+/* ------------------ */
+/*     03 . Main      */
+/* ------------------ */
+
+
+/* 03 . Main -- || 3.1 Section 01 -- Coronavirus */
+
+.ms-main .ms-main-section-1 {
+    position: relative;
+}
+
+.ms-main .ms-main-section-1::after {
+    content: "";
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    background: url("../images/Illustration/Illustration_\(Section_03\)_Bg-1.png");
+    background-size: cover;
+    right: -240px;
+    bottom: 0;
+}
+
+.ms-main .ms-main-section-1::before {
+    content: "";
+    width: 99px;
+    height: 99px;
+    position: absolute;
+    background: url("../images/Illustration/Illustration_\(Section_03\)_Bg-1.png");
+    background-size: cover;
+    right: -70px;
+    bottom: -109px;
+}
+
+.ms-main .ms-main-section-1--left {
+    max-width: 650px;
+    position: relative;
+    background: url("../images/Illustration/Illustration_(Section_02).png") no-repeat;
+    background-size: contain;
+    background-position: center;
+    min-height: 450px;
+}
+
+
+.ms-main .ms-main-section-1--left img:nth-child(1) {
+    width: 200px;
+    left: 24%;
+    top: 30%;
+}
+
+.ms-main .ms-main-section-1--left img:nth-child(2) {
+    width: 200px;
+    left: 50%;
+    top: 13%;
+}
+
+.ms-main .ms-main-section-1--left img:nth-child(3) {
+    width: 200px;
+    left: 50%;
+    top: 50%;
+}
+
+.ms-main .ms-main-section-1--right h4 {
+    text-align: left;
+}
+
+.ms-main .ms-main-section-1--right h2 {
+    text-align: left;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+/* 03 . Main -- || 3.2 Section 02 -- Contagion */
+
+.ms-main .ms-main-section-2 {
+    margin-bottom: 50px;
+
+}
+
+.ms-main .ms-main-section-2 .ms-main-section-2--heading {
+    margin-bottom: 50px;
+}
+
+.ms-main .ms-main-section-2 .ms-main-section-2--items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+}
+
+.ms-main .ms-main-section-2 .ms-main-section-2--items .item {
+    background: #FFFFFF;
+    box-shadow: 0px 35px 87px rgba(0, 0, 0, 0.11);
+    border-radius: 10px;
+    padding: 50px 10px;
+    width: 350px !important;
+    margin: 15px;
+    border-bottom: 5px solid transparent;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    z-index: 50;
+}
+
+.ms-main .ms-main-section-2 .ms-main-section-2--items .item:hover {
+    background: #FFFFFF;
+    box-shadow: 0px 35px 87px rgba(0, 0, 0, 0.11);
+    border-radius: 10px;
+    padding: 50px 10px;
+    margin: 15px;
+    border-bottom: 5px solid var(--ms-primary-color);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.ms-main .ms-main-section-2 .ms-main-section-2--items::before {
+    content: "";
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background: url("../images/Illustration/Illustration_\(Section_03\)_Bg-1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    bottom: 36px;
+    left: -82px;
+    z-index: 10;
+}
+
+.ms-main .ms-main-section-2 .ms-main-section-2--items .item img {
+    width: 200px;
+    display: block;
+    margin: auto;
+}
+
+.ms-main .ms-main-section-2 .ms-main-section-2--items .item h2 {
+    text-align: center;
+    padding: 0;
+    font-size: 25px;
+    margin: 50px 0px 20px 0px;
+}
+
+.ms-main .ms-main-section-2 .ms-main-section-2--items .item P {
+    text-align: center;
+    font-size: 15px;
+}
+
+
+/* 03 . Main -- || 3.3 Section 03 -- Symptomps */
+
+.ms-main .ms-main-section-3 {
+    position: relative;
+}
+
+.ms-main .ms-main-section-3::before {
+    content: "";
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    background: url("../images/Illustration/Symptomps--left.png");
+    background-size: contain;
+    bottom: 145px;
+    left: -20px;
+    z-index: 10;
+    background-repeat: no-repeat;
+}
+
+.ms-main .ms-main-section-3::after {
+    content: "";
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    background: url("../images/Illustration/Symptomps--right.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    bottom: 0px;
+    right: -100px;
+    z-index: 10;
+}
+
+.ms-main .ms-main-section-3 .ms-main-section-3--body img {
+    width: 70%;
+    margin: auto;
+}
+
+/* 03 . Main -- || 3.4 Section 04 -- what  should we do */
+
+.ms-main .ms-main-section-4 {
+    position: relative;
+}
+
+.ms-main .ms-main-section-4::before {
+    content: "";
+    width: 300px;
+    height: 220px;
+    position: absolute;
+    background: url("../images/Illustration/whatShould--Bg-01.png");
+    background-size: contain;
+    top: 496px;
+    left: -225px;
+    z-index: 10;
+    background-repeat: no-repeat;
+}
+
+.ms-main .ms-main-section-4::after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background: url("../images/Illustration/whatShould--Bg-02.png");
+    background-size: contain;
+    bottom: 375px;
+    right: -115px;
+    z-index: 10;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+}
+
+.ms-main .ms-main-section-4 .ms-main-section-4--bgImg {
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    position: absolute;
+    background: url("../images/Illustration/whatShould--Bg-03.png");
+    background-size: contain;
+    bottom: 116px;
+    right: -244px;
+    z-index: 10;
+    background-repeat: no-repeat;
+}
+
+.ms-main .ms-main-section-4 .ms-main-section-4--body .instruction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ms-main .ms-main-section-4 .ms-main-section-4--body .instruction .instruction--text {
+    padding-left: 130px;
+    position: relative;
+}
+
+.ms-main .ms-main-section-4 .ms-main-section-4--body .instruction .instruction--text h2::before {
+    content: "";
+    position: absolute;
+    font-size: 30px;
+    left: 20px;
+    font-weight: bold;
+    font-family: var(--ms-secondary-font);
+    color: var(--ms-primary-color);
+    background: #FEE6E5;
+    padding: 15px;
+    border-radius: 50px;
+    top: -15px;
+}
+
+.ms-main .ms-main-section-4 .ms-main-section-4--body .instruction:nth-child(1) .instruction--text h2::before {
+    content: "01" !important;
+}
+
+.ms-main .ms-main-section-4 .ms-main-section-4--body .instruction:nth-child(2) .instruction--text h2::before {
+    content: "02";
+}
+
+.ms-main .ms-main-section-4 .ms-main-section-4--body .instruction:nth-child(3) .instruction--text h2::before {
+    content: "03";
+}
+
+.ms-main .ms-main-section-4 .ms-main-section-4--body .instruction:nth-child(4) .instruction--text h2::before {
+    content: "04";
+}
+
+.ms-main .ms-main-section-4 .ms-main-section-4--body .instruction .instruction--text h2 {
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+.ms-main .ms-main-section-4 .ms-main-section-4--body .instruction .instruction--text p {
+    max-width: 400px;
+    font-size: 15px;
+}
+
+
+
+/* 03 . Main -- || 3.5 Section 05 -- Live Reports  */
+
+.ms-main-section-5--liveReports {
+    display: flex;
+    font-family: var(--ms-secondary-font);
+    color: var(--ms-secondary-color);
+}
+
+/* 03 . Main -- 7.5 Section 05 -- Live Reports -- Map  */
+
+.ms-main-section-5--liveReports--map {
+    width: 100%;
+    background: url("../images/Illustration/map.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.ms-main-section-5--liveReports--map .controlBar {
+    background: #FFFFFF;
+    box-shadow: 0px 5px 50px rgba(104, 33, 28, 0.1);
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+.ms-main-section-5--liveReports--map .controlBar *:active {
+    opacity: 0.7;
+}
+
+.ms-main-section-5--liveReports--map .controlBar hr {
+    width: 10px;
+    height: 2px;
+    border-radius: 5px;
+    margin: 10px auto;
+}
+
+.ms-main-section-5--liveReports--map .controlBar button:nth-of-type(1) img {
+    transform: scale(2);
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
+    -o-transform: scale(2);
+}
+
+.ms-main-section-5--liveReports--map .controlBar button {
+    background: transparent;
+    margin: auto;
+    display: block;
+}
+
+.ms-main-section-5--liveReports--map .controlBar a:nth-of-type(3) img,
+.ms-main-section-5--liveReports--map .controlBar a:nth-of-type(4) img {
+    width: 12px;
+    margin: 2px auto;
+    padding: 5px 0;
+}
+
+.ms-main-section-5--liveReports--map .controlBar a img,
+.ms-main-section-5--liveReports--map .controlBar button img {
+    transform: scale(1);
+    padding: 5px;
+    margin: 10px auto;
+    box-sizing: content-box;
+}
+
+.ms-main-section-5--liveReports--map .controlBar button:nth-of-type(2) img {
+    width: 25px;
+}
+
+.ms-main-section-5--liveReports--map .search img:active {
+    opacity: 0.7;
+}
+
+.ms-main-section-5--liveReports--map .search {
+    background: #FFFFFF;
+    box-shadow: 0px 7px 76px rgba(146, 53, 46, 0.349);
+    padding: 15px;
+    border-radius: 4.16667px;
+    margin-right: 30px;
+}
+
+.ms-main-section-5--liveReports--map .search a img {
+    width: 23px;
+}
+
+
+
+/* 03 . Main -- 7.5 Section 05 -- Live Reports -- Info  */
+
+.ms-main-section-5--liveReports--info {
+    width: 500px;
+    background: linear-gradient(360deg, #FFFBFB -79.45%, #FDFDFD 105.35%);
+    box-shadow: 0px 7px 95px rgba(0, 0, 0, 0.13);
+    padding: 40px;
+}
+
+.ms-main-section-5--liveReports--info .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ms-main-section-5--liveReports--info .header h1 {
+    font-weight: bold;
+
+}
+
+.ms-main-section-5--liveReports--info .header .ms-icons a span:active {
+    opacity: 0.7;
+}
+
+.ms-main-section-5--liveReports--info .header .ms-icons {
+    background: #FFFFFF;
+    box-shadow: 0px 5px 50px rgba(87, 1, 0, 0.1);
+    border-radius: 6.16667px;
+    padding: 4px 6px;
+}
+
+.ms-main-section-5--liveReports--info .header .ms-icons a {
+    color: #A2A5B2;
+    display: inline-block;
+    position: relative;
+}
+
+.ms-main-section-5--liveReports--info .header .ms-icons a:nth-of-type(2) {
+    color: var(--ms-primary-color);
+}
+
+.ms-main-section-5--liveReports--info .header .ms-icons a:nth-child(2)::before {
+    content: "";
+    width: 2px;
+    height: 16px;
+    position: absolute;
+    background: #280b0b2b;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -2px;
+}
+
+.ms-main-section-5--liveReports--info .header .ms-icons a i {
+    font-size: 20px;
+    vertical-align: middle;
+    padding: 5px 7px;
+}
+
+.ms-main-section-5--liveReports--info .body {
+    margin-top: 25px;
+}
+
+.ms-main-section-5--liveReports--info .body .country-data {
+    margin: 30px auto;
+}
+
+.ms-main-section-5--liveReports--info .body .country-data img {
+    width: 33px;
+}
+
+.ms-main-section-5--liveReports--info .body .country-data div {
+    display: inherit;
+}
+
+.ms-main-section-5--liveReports--info .body .country-data h4 {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0px 15px;
+}
+
+.ms-main-section-5--liveReports--info .body .country-data h6 {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.ms-main-section-5--liveReports--info .body .country-data .status img {
+    width: 17px;
+    display: block;
+    margin-top: 3px;
+}
+
+
+/* ---------------- */
+/*   04 . Footer     */
+/* ---------------- */
+
+/* 04 . Footer -- || 4.1 Opt In Form */
+
+.ms-footer {
+    position: relative;
+}
+
+.ms-footer::after {
+    content: "";
+    background: url("../images/Illustration/Footer--Bg-01.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    right: -222px;
+    top: 0;
+}
+
+.ms-footer::before {
+    content: "";
+    background: url("../images/Illustration/Footer--Bg-02.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 0;
+    top: -44px;
+}
+
+.ms-footer--optIn {
+    margin: 100px auto;
+}
+
+.ms-footer--optIn form {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: fit-content;
+    margin: auto;
+}
+
+.ms-footer--optIn h1 {
+    font-size: 45px;
+    font-weight: 600;
+    color: #0C6C44;
+    max-width: 500px;
+    margin: 35px auto;
+    text-align: center;
+}
+
+.ms-footer--optIn form input[type="email"] {
+    font-weight: normal;
+    background: white;
+    box-shadow: 0px 8px 80px rgba(0, 0, 0, 0.11);
+    border-radius: 57px;
+    width: 600px;
+    padding: 25px 20px;
+    margin: auto;
+    display: block;
+    border: none;
+    font-size: 16px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.ms-footer--optIn form input[type="email"]:focus-visible {
+    border: none;
+    outline: none;
+}
+
+.ms-btn--hover-transparent:hover {
+    border: 2px solid #FB4C47 !important;
+    color: #FB4C47;
+    background: white;
+}
+
+.ms-footer--optIn form input[type="submit"] {
+    padding: 20px 55px;
+    border-radius: 50px;
+    border: none;
+    background: var(--ms-primary-color);
+    color: white;
+    font-size: 17px;
+    border: 2px solid var(--ms-primary-color);
+    position: absolute;
+    margin-right: 10px;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+}
+
+.ms-footer--optIn form input[type="submit"]:hover {
+    background: transparent;
+    color: var(--ms-secondary-color);
+}
+
+/* 04 . Footer -- || 4.2 Main */
+
+.ms-footer--main {
+    margin: 30px auto;
+}
+
+.ms-footer--main .logo {
+    width: 150px;
+}
+
+.ms-footer--main .menu ul li {
+    font-size: 17px;
+}
+
+.ms-footer--main .menu ul li a {
+    color: var(--ms-secondary-color);
+}
+
+.ms-footer--main .socialIcon a {
+    padding: 12px;
+    position: relative;
+    color: var(--ms-secondary-color);
+}
+
+.ms-footer--main .socialIcon i {
+    font-size: 16px;
+}
+
+
+/* 04 . Footer -- || 4.3 Copyright Info */
+
+.ms-footer--copyrightInfo {
+    margin: 25px auto;
+}
+
+.ms-footer--copyrightInfo p {
+    width: fit-content;
+    font-size: 16px;
+    color: var(--ms-secondary-color);
+    opacity: 0.8;
+    margin: auto;
+    text-align: center;
+    line-height: 130%;
+}
